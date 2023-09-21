@@ -1,8 +1,8 @@
-import NextAuth, { AuthOptions } from "next-auth";
+import NextAuth, { NextAuthOptions } from "next-auth";
 
 import OneLoginProvider from "next-auth/providers/onelogin";
 
-const authOptions: AuthOptions = {
+const authOptions: NextAuthOptions = {
   providers: [
     OneLoginProvider({
       clientId: process.env.ONELOGIN_CLIENT_ID,
