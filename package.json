@@ -9,6 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@oslokommune/punkt-assets": "^8.0.0",
+    "@oslokommune/punkt-css": "^8.0.5",
+    "@oslokommune/punkt-react": "^8.0.5",
     "@types/node": "20.6.3",
     "@types/react": "18.2.22",
     "@types/react-dom": "18.2.7",
@@ -21,5 +24,8 @@
     "react-dom": "18.2.0",
     "tailwindcss": "3.3.3",
     "typescript": "5.2.2"
+  },
+  "devDependencies": {
+    "sass": "^1.68.0"
   }
 }
