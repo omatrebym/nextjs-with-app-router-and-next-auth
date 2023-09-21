@@ -6,6 +6,7 @@ import Shortcut from "@oslokommune/punkt-assets/dist/logos/16x16-favicon.png";
 import Apple from "@oslokommune/punkt-assets/dist/logos/apple-touch-icon.png";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
+import NextAuthProvider from "./context/nextAuthProvider";
 
 export const metadata: Metadata = {
   title: "Tester NextJS",
@@ -25,9 +26,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="tw-flex tw-flex-col tw-min-h-screen tw-justify-between">
-        <Header />
-        <main className="tw-mt-24">{children}</main>
-        <Footer />
+        <NextAuthProvider>
+          <Header />
+          <main className="tw-mt-24">{children}</main>
+          <Footer />
+        </NextAuthProvider>
       </body>
     </html>
   );
