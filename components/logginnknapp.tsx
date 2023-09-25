@@ -1,8 +1,31 @@
 "use client";
 
-import { PktButton } from "@oslokommune/punkt-react";
-import { signIn } from "next-auth/react";
+import { PktAlert, PktButton } from "@oslokommune/punkt-react";
+import { signIn, useSession } from "next-auth/react";
+import { RedirectType, redirect, useSearchParams } from "next/navigation";
 
 export const LoggInnKnapp = () => {
-  return <PktButton onClick={() => signIn()}>Logg inn</PktButton>;
+  const { data: session } = useSession();
+  const params = useSearchParams();
+
+  const handleSignIn = async () => {
+    await signIn("onelogin", {
+      redirect: false,
+    });
+  };
+
+  if (session) redirect("/", RedirectType.replace);
+
+  const error = params.get("error");
+
+  return (
+    <>
+      <PktButton onClick={handleSignIn}>Logg inn</PktButton>
+      {error && (
+        <PktAlert skin="error" title="Feil ved innlogging">
+          {error}
+        </PktAlert>
+      )}
+    </>
+  );
 };
