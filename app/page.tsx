@@ -9,7 +9,6 @@ export default function Home() {
         <h3 className="tw-text-h3">Enkel undertittel</h3>
         <p>Et eller annet...</p>
       </section>
-      <LoggInnKnapp />
     </>
   );
 }

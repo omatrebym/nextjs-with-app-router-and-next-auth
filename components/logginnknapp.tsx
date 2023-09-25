@@ -10,7 +10,8 @@ export const LoggInnKnapp = () => {
 
   const handleSignIn = async () => {
     await signIn("onelogin", {
-      redirect: false,
+      callbackUrl: "/",
+      redirect: true,
     });
   };
 

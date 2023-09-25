@@ -6,8 +6,25 @@ const authOptions: NextAuthOptions = {
   providers: [
     OneLoginProvider({
       clientId: process.env.ONELOGIN_CLIENT_ID,
-      clientSecret: process.env.ONELOGIN_CLIENT_SECRET,
       issuer: process.env.ONELOGIN_ISSUER,
+      authorization: {
+        url: `${process.env.ONELOGIN_ISSUER}/oidc/2/auth}`,
+        params: {
+          scope: "openid profile email groups params",
+          response_type: "code",
+        },
+      },
+      token: `${process.env.ONELOGIN_ISSUER}/oidc/2/token`,
+      checks: ["pkce", "state"],
+      client: { token_endpoint_auth_method: "none" },
+      profile(profile) {
+        return {
+          id: profile.sub,
+          name: profile.name,
+          email: profile.email,
+          image: profile.picture,
+        };
+      },
     }),
   ],
   pages: {
