@@ -28,7 +28,9 @@ export default function RootLayout({
       <body className="tw-flex tw-flex-col tw-min-h-screen tw-justify-between">
         <NextAuthProvider>
           <Header />
-          <main className="tw-mt-24">{children}</main>
+          <main className="tw-my-0 tw-mx-auto tw-pt-24 tw-pb-16 tablet:tw-pt-28 tablet:tw-px-8 laptop:tw-pt-32">
+            {children}
+          </main>
           <Footer />
         </NextAuthProvider>
       </body>
