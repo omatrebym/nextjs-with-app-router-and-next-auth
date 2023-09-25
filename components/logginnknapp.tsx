@@ -19,13 +19,15 @@ export const LoggInnKnapp = () => {
   const error = params.get("error");
 
   return (
-    <>
-      <PktButton onClick={handleSignIn}>Logg inn</PktButton>
+    <div>
+      <PktButton className="tw-mb-4" onClick={handleSignIn}>
+        Logg inn
+      </PktButton>
       {error && (
         <PktAlert skin="error" title="Feil ved innlogging">
           {error}
         </PktAlert>
       )}
-    </>
+    </div>
   );
 };
