@@ -19,7 +19,7 @@ export default function Header() {
       }
       serviceName="Klagebehandling"
       canChangeRepresentation={false}
-      logOut={() => signOut()}
+      logOut={() => signOut({ callbackUrl: "/auth/signin" })}
     />
   );
 }

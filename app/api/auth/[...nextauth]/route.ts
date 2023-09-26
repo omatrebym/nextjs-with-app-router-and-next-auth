@@ -3,7 +3,6 @@ import NextAuth, { NextAuthOptions } from "next-auth";
 import OneLoginProvider from "next-auth/providers/onelogin";
 
 // TODO:
-// - Få env til å funke med client_id
 // - Legg til logout redirect URI
 // - Legg til redirect etter signin gjennom state(?)
 // - Tokens for API-er(?)

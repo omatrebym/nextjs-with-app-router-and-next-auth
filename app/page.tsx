@@ -1,5 +1,3 @@
-import { LoggInnKnapp } from "@/components/logginnknapp";
-
 export default function Home() {
   return (
     <>
