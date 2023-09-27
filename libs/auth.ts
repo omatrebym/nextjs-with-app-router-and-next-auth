@@ -2,10 +2,6 @@ import { NextAuthOptions } from "next-auth";
 
 import OneLoginProvider from "next-auth/providers/onelogin";
 
-// TODO:
-// - Legg til redirect etter signin gjennom state(?)
-// - Tokens for API-er(?)
-
 // Husk å legge til Redirect URI i OneLogin Applications -> Configuration:
 // <base URL>/api/auth/callback/onelogin
 export const authOptions: NextAuthOptions = {
