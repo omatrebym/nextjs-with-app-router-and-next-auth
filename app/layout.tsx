@@ -9,8 +9,8 @@ import Footer from "@/components/footer";
 import NextAuthProvider from "./context/nextAuthProvider";
 
 export const metadata: Metadata = {
-  title: "Tester NextJS",
-  description: "Beskrivelse av testing av NextJS",
+  title: "Eksempelapplikasjon NextJS",
+  description: "Beskrivelse av eksempelapplikasjon laget med NextJS",
   icons: {
     icon: Favicon.src,
     shortcut: Shortcut.src,
