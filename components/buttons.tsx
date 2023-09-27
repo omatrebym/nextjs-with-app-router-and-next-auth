@@ -8,9 +8,11 @@ export const SignInButton = () => {
   const { data: session } = useSession();
   const params = useSearchParams();
 
+  const callbackUrl = params.get("callbackUrl");
+
   const handleSignIn = async () => {
     await signIn("onelogin", {
-      callbackUrl: "/",
+      callbackUrl: callbackUrl ?? "/",
       redirect: true,
     });
   };
