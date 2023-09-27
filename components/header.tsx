@@ -17,7 +17,7 @@ export default function Header() {
             }
           : undefined
       }
-      serviceName="Klagebehandling"
+      serviceName="Eksempelapplikasjon"
       canChangeRepresentation={false}
       logOut={() => signOut({ callbackUrl: "/auth/signin" })}
     />
