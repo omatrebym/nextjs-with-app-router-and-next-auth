@@ -1,4 +1,4 @@
-import { LoggInnKnapp } from "@/components/logginnknapp";
+import { SignInButton } from "@/components/buttons";
 
 export default function SignIn() {
   return (
@@ -9,7 +9,7 @@ export default function SignIn() {
         <h3 className="tw-text-h3">Enkel undertittel</h3>
         <p>Et eller annet...</p>
       </section>
-      <LoggInnKnapp />
+      <SignInButton />
     </>
   );
 }

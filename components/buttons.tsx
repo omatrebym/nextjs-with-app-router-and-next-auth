@@ -1,11 +1,10 @@
 "use client";
 
 import { PktAlert, PktButton } from "@oslokommune/punkt-react";
-import { error } from "console";
 import { signIn, useSession } from "next-auth/react";
 import { RedirectType, redirect, useSearchParams } from "next/navigation";
 
-export const LoggInnKnapp = () => {
+export const SignInButton = () => {
   const { data: session } = useSession();
   const params = useSearchParams();
 
